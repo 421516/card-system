@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayPassTplAddRequest extends AbstractAlipayRequest { private $tplContent; private $uniqueId; public function setTplContent($tplContent) { $this->tplContent = $tplContent; $this->apiParams['tpl_content'] = $tplContent; } public function getTplContent() { return $this->tplContent; } public function setUniqueId($uniqueId) { $this->uniqueId = $uniqueId; $this->apiParams['unique_id'] = $uniqueId; } public function getUniqueId() { return $this->uniqueId; } } 

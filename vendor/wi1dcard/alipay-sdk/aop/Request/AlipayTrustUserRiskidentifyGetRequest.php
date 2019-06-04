@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayTrustUserRiskidentifyGetRequest extends AbstractAlipayRequest { private $type; public function setType($type) { $this->type = $type; $this->apiParams['type'] = $type; } public function getType() { return $this->type; } } 

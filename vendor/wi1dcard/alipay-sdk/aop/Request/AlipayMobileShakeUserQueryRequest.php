@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMobileShakeUserQueryRequest extends AbstractAlipayRequest { private $dynamicId; private $dynamicIdType; public function setDynamicId($dynamicId) { $this->dynamicId = $dynamicId; $this->apiParams['dynamic_id'] = $dynamicId; } public function getDynamicId() { return $this->dynamicId; } public function setDynamicIdType($dynamicIdType) { $this->dynamicIdType = $dynamicIdType; $this->apiParams['dynamic_id_type'] = $dynamicIdType; } public function getDynamicIdType() { return $this->dynamicIdType; } } 

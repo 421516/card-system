@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayDataBillDownloadurlGetRequest extends AbstractAlipayRequest { private $billDate; private $billType; public function setBillDate($billDate) { $this->billDate = $billDate; $this->apiParams['bill_date'] = $billDate; } public function getBillDate() { return $this->billDate; } public function setBillType($billType) { $this->billType = $billType; $this->apiParams['bill_type'] = $billType; } public function getBillType() { return $this->billType; } } 

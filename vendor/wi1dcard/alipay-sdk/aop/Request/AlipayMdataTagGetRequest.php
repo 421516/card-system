@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMdataTagGetRequest extends AbstractAlipayRequest { private $requiredTags; private $userId; public function setRequiredTags($requiredTags) { $this->requiredTags = $requiredTags; $this->apiParams['required_tags'] = $requiredTags; } public function getRequiredTags() { return $this->requiredTags; } public function setUserId($userId) { $this->userId = $userId; $this->apiParams['user_id'] = $userId; } public function getUserId() { return $this->userId; } } 

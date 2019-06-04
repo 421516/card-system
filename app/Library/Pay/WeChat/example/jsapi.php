@@ -1,5 +1,5 @@
 <?php
-ini_set('date.timezone', 'Asia/Shanghai'); require_once '../lib/WxPay.Api.php'; require_once 'WxPay.JsApiPay.php'; require_once '../WxLog.php'; function printf_info($sp69c4ce) { foreach ($sp69c4ce as $sp1e4b49 => $sp39a65f) { echo "<font color='#00ff55;'>{$sp1e4b49}</font> : {$sp39a65f} <br/>"; } } $spc24b62 = new JsApiPay(); $sp23551f = $spc24b62->GetOpenid(); $sp5bf110 = new WxPayUnifiedOrder(); $sp5bf110->SetBody('test'); $sp5bf110->SetAttach('test'); $sp5bf110->SetOut_trade_no(WxPayConfig::MCHID . date('YmdHis')); $sp5bf110->SetTotal_fee('1'); $sp5bf110->SetTime_start(date('YmdHis')); $sp5bf110->SetTime_expire(date('YmdHis', time() + 600)); $sp5bf110->SetGoods_tag('test'); $sp5bf110->SetNotify_url('http://paysdk.weixin.qq.com/example/notify.php'); $sp5bf110->SetTrade_type('JSAPI'); $sp5bf110->SetOpenid($sp23551f); $sp61541f = WxPayApi::unifiedOrder($sp5bf110); echo '<font color="#f00"><b>统一下单支付单信息</b></font><br/>'; printf_info($sp61541f); $sp76137e = $spc24b62->GetJsApiParameters($sp61541f); $sp7ac487 = $spc24b62->GetEditAddressParameters(); ?>
+ini_set('date.timezone', 'Asia/Shanghai'); require_once '../lib/WxPay.Api.php'; require_once 'WxPay.JsApiPay.php'; require_once '../WxLog.php'; function printf_info($sp29e0c7) { foreach ($sp29e0c7 as $spf74fd0 => $sp67821d) { echo "<font color='#00ff55;'>{$spf74fd0}</font> : {$sp67821d} <br/>"; } } $sp8b5c39 = new JsApiPay(); $sp4c42b0 = $sp8b5c39->GetOpenid(); $spd2b050 = new WxPayUnifiedOrder(); $spd2b050->SetBody('test'); $spd2b050->SetAttach('test'); $spd2b050->SetOut_trade_no(WxPayConfig::MCHID . date('YmdHis')); $spd2b050->SetTotal_fee('1'); $spd2b050->SetTime_start(date('YmdHis')); $spd2b050->SetTime_expire(date('YmdHis', time() + 600)); $spd2b050->SetGoods_tag('test'); $spd2b050->SetNotify_url('http://paysdk.weixin.qq.com/example/notify.php'); $spd2b050->SetTrade_type('JSAPI'); $spd2b050->SetOpenid($sp4c42b0); $sp63564c = WxPayApi::unifiedOrder($spd2b050); echo '<font color="#f00"><b>统一下单支付单信息</b></font><br/>'; printf_info($sp63564c); $spf1b283 = $sp8b5c39->GetJsApiParameters($sp63564c); $spfb75b5 = $sp8b5c39->GetEditAddressParameters(); ?>
 
 <html>
 <head>
@@ -12,7 +12,7 @@ ini_set('date.timezone', 'Asia/Shanghai'); require_once '../lib/WxPay.Api.php'; 
 	{
 		WeixinJSBridge.invoke(
 			'getBrandWCPayRequest',
-			<?php  echo $sp76137e; ?>
+			<?php  echo $spf1b283; ?>
 ,
 			function(res){
 				WeixinJSBridge.log(res.err_msg);
@@ -41,7 +41,7 @@ ini_set('date.timezone', 'Asia/Shanghai'); require_once '../lib/WxPay.Api.php'; 
 	{
 		WeixinJSBridge.invoke(
 			'editAddress',
-			<?php  echo $sp7ac487; ?>
+			<?php  echo $spfb75b5; ?>
 ,
 			function(res){
 				var value1 = res.proviceFirstStageName;

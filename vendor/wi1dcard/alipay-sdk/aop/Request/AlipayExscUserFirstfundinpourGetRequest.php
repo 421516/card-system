@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayExscUserFirstfundinpourGetRequest extends AbstractAlipayRequest { private $alipayId; public function setAlipayId($alipayId) { $this->alipayId = $alipayId; $this->apiParams['alipay_id'] = $alipayId; } public function getAlipayId() { return $this->alipayId; } } 

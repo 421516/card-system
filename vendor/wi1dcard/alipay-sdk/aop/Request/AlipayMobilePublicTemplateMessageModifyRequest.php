@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMobilePublicTemplateMessageModifyRequest extends AbstractAlipayRequest { private $templateId; private $tradeSetting; public function setTemplateId($templateId) { $this->templateId = $templateId; $this->apiParams['template_id'] = $templateId; } public function getTemplateId() { return $this->templateId; } public function setTradeSetting($tradeSetting) { $this->tradeSetting = $tradeSetting; $this->apiParams['trade_setting'] = $tradeSetting; } public function getTradeSetting() { return $this->tradeSetting; } } 

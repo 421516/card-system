@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayAcquireQueryRequest extends AbstractAlipayRequest { private $outTradeNo; private $tradeNo; public function setOutTradeNo($outTradeNo) { $this->outTradeNo = $outTradeNo; $this->apiParams['out_trade_no'] = $outTradeNo; } public function getOutTradeNo() { return $this->outTradeNo; } public function setTradeNo($tradeNo) { $this->tradeNo = $tradeNo; $this->apiParams['trade_no'] = $tradeNo; } public function getTradeNo() { return $this->tradeNo; } } 

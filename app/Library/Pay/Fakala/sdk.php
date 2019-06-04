@@ -1,5 +1,5 @@
 <?php
-class fakala { public $gateway; public $uid; public $key; public function __construct($sp2984e4, $sp5d3f49, $sp1e4b49) { $this->gateway = $sp2984e4; $this->uid = $sp5d3f49; $this->key = $sp1e4b49; } function getSignStr($sp7c7a93) { ksort($sp7c7a93); $sp7bd4b2 = ''; foreach ($sp7c7a93 as $spc57c89 => $sp2a00a3) { if ('sign' !== $spc57c89) { $sp7bd4b2 .= $spc57c89 . '=' . $sp2a00a3 . '&'; } } return $sp7bd4b2; } function getSign($sp7c7a93, $sp1e4b49, &$sp9cc19c = false) { $sp7bd4b2 = self::getSignStr($sp7c7a93); $sp1e1df1 = md5($sp7bd4b2 . 'key=' . $sp1e4b49); if ($sp9cc19c !== false) { $sp9cc19c = $sp7bd4b2 . 'sign=' . $sp1e1df1; } return $sp1e1df1; } function goPay($sp2688c6, $sp930bb6, $sp4510be, $sp152c6f, $sp6f1ff6, $sp2ff0a2, $spbaa59b, $spfad78b) { $sp7c7a93 = array('version' => '20190501', 'uid' => (int) $this->uid, 'subject' => $sp930bb6, 'out_trade_no' => $sp4510be, 'total_fee' => (int) $sp6f1ff6, 'cost' => (int) $sp152c6f, 'payway' => $sp2688c6, 'return_url' => $spbaa59b, 'notify_url' => $spfad78b, 'attach' => $sp2ff0a2); $sp7c7a93['sign'] = $this->getSign($sp7c7a93, $this->key); die('
+class fakala { public $gateway; public $uid; public $key; public function __construct($spad0233, $spf46c5d, $spf74fd0) { $this->gateway = $spad0233; $this->uid = $spf46c5d; $this->key = $spf74fd0; } function getSignStr($sp20678b) { ksort($sp20678b); $sp34d7e1 = ''; foreach ($sp20678b as $sp614732 => $sp154f6e) { if ('sign' !== $sp614732) { $sp34d7e1 .= $sp614732 . '=' . $sp154f6e . '&'; } } return $sp34d7e1; } function getSign($sp20678b, $spf74fd0, &$spc2a6c5 = false) { $sp34d7e1 = self::getSignStr($sp20678b); $sp9c9a88 = md5($sp34d7e1 . 'key=' . $spf74fd0); if ($spc2a6c5 !== false) { $spc2a6c5 = $sp34d7e1 . 'sign=' . $sp9c9a88; } return $sp9c9a88; } function goPay($sp651d92, $sp89af34, $sp206d07, $sp729689, $spbc3979, $spa76028, $sp804d12, $sp3b73c7) { $sp20678b = array('version' => '20190501', 'uid' => (int) $this->uid, 'subject' => $sp89af34, 'out_trade_no' => $sp206d07, 'total_fee' => (int) $spbc3979, 'cost' => (int) $sp729689, 'payway' => $sp651d92, 'return_url' => $sp804d12, 'notify_url' => $sp3b73c7, 'attach' => $spa76028); $sp20678b['sign'] = $this->getSign($sp20678b, $this->key); die('
 <!doctype html>
 <html>
 <head>
@@ -8,17 +8,17 @@ class fakala { public $gateway; public $uid; public $key; public function __cons
 </head>
 <body onload="document.pay.submit()">
 <form name="pay" action="' . $this->gateway . '/api/order" method="post">
-    <input type="hidden" name="version" value="' . $sp7c7a93['version'] . '">
-    <input type="hidden" name="uid" value="' . $sp7c7a93['uid'] . '">
-    <input type="hidden" name="subject" value="' . $sp7c7a93['subject'] . '">
-    <input type="hidden" name="out_trade_no" value="' . $sp7c7a93['out_trade_no'] . '">
-    <input type="hidden" name="total_fee" value="' . $sp7c7a93['total_fee'] . '">
-    <input type="hidden" name="cost" value="' . $sp7c7a93['cost'] . '">
-    <input type="hidden" name="payway" value="' . $sp7c7a93['payway'] . '">
-    <input type="hidden" name="return_url" value="' . $sp7c7a93['return_url'] . '">
-    <input type="hidden" name="notify_url" value="' . $sp7c7a93['notify_url'] . '">
-    <input type="hidden" name="attach" value="' . $sp7c7a93['attach'] . '">
-    <input type="hidden" name="sign" value="' . $sp7c7a93['sign'] . '">
+    <input type="hidden" name="version" value="' . $sp20678b['version'] . '">
+    <input type="hidden" name="uid" value="' . $sp20678b['uid'] . '">
+    <input type="hidden" name="subject" value="' . $sp20678b['subject'] . '">
+    <input type="hidden" name="out_trade_no" value="' . $sp20678b['out_trade_no'] . '">
+    <input type="hidden" name="total_fee" value="' . $sp20678b['total_fee'] . '">
+    <input type="hidden" name="cost" value="' . $sp20678b['cost'] . '">
+    <input type="hidden" name="payway" value="' . $sp20678b['payway'] . '">
+    <input type="hidden" name="return_url" value="' . $sp20678b['return_url'] . '">
+    <input type="hidden" name="notify_url" value="' . $sp20678b['notify_url'] . '">
+    <input type="hidden" name="attach" value="' . $sp20678b['attach'] . '">
+    <input type="hidden" name="sign" value="' . $sp20678b['sign'] . '">
 </form>
 </body>
-        '); } function notify_verify() { $sp7c7a93 = $_POST; if ($sp7c7a93['sign'] === $this->getSign($sp7c7a93, $this->key)) { echo 'success'; return true; } else { echo 'fail'; return false; } } function return_verify() { $sp7c7a93 = $_GET; if ($sp7c7a93['sign'] === $this->getSign($sp7c7a93, $this->key)) { return true; } else { return false; } } function get_order($sp4510be) { $sp820aff = $this->curl_post($this->gateway . '/api/order/query', 'uid=' . $this->uid . '&out_trade_no=' . $sp4510be); $sp820aff = @json_decode($sp820aff, true); if (is_array($sp820aff) && is_array($sp820aff['data']) && isset($sp820aff['data']['order'])) { return $sp820aff['data']['order']; } return array(); } private function curl_post($sp59c732, $sp69c4ce) { $spe00444 = curl_init($sp59c732); curl_setopt($spe00444, CURLOPT_HEADER, 0); curl_setopt($spe00444, CURLOPT_RETURNTRANSFER, 1); curl_setopt($spe00444, CURLOPT_SSL_VERIFYPEER, true); curl_setopt($spe00444, CURLOPT_POST, true); curl_setopt($spe00444, CURLOPT_POSTFIELDS, $sp69c4ce); $sp31c557 = curl_exec($spe00444); curl_close($spe00444); return $sp31c557; } }
+        '); } function notify_verify() { $sp20678b = $_POST; if ($sp20678b['sign'] === $this->getSign($sp20678b, $this->key)) { echo 'success'; return true; } else { echo 'fail'; return false; } } function return_verify() { $sp20678b = $_GET; if ($sp20678b['sign'] === $this->getSign($sp20678b, $this->key)) { return true; } else { return false; } } function get_order($sp206d07) { $sp9610ab = $this->curl_post($this->gateway . '/api/order/query', 'uid=' . $this->uid . '&out_trade_no=' . $sp206d07); $sp9610ab = @json_decode($sp9610ab, true); if (is_array($sp9610ab) && is_array($sp9610ab['data']) && isset($sp9610ab['data']['order'])) { return $sp9610ab['data']['order']; } return array(); } private function curl_post($sp11a0e0, $sp29e0c7) { $sp6c533c = curl_init($sp11a0e0); curl_setopt($sp6c533c, CURLOPT_HEADER, 0); curl_setopt($sp6c533c, CURLOPT_RETURNTRANSFER, 1); curl_setopt($sp6c533c, CURLOPT_SSL_VERIFYPEER, true); curl_setopt($sp6c533c, CURLOPT_POST, true); curl_setopt($sp6c533c, CURLOPT_POSTFIELDS, $sp29e0c7); $sp0e2174 = curl_exec($sp6c533c); curl_close($sp6c533c); return $sp0e2174; } }

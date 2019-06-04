@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayEbppPdeductBillPayStatusRequest extends AbstractAlipayRequest { private $agreementId; private $outOrderNo; public function setAgreementId($agreementId) { $this->agreementId = $agreementId; $this->apiParams['agreement_id'] = $agreementId; } public function getAgreementId() { return $this->agreementId; } public function setOutOrderNo($outOrderNo) { $this->outOrderNo = $outOrderNo; $this->apiParams['out_order_no'] = $outOrderNo; } public function getOutOrderNo() { return $this->outOrderNo; } } 

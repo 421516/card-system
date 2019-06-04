@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AntMerchantExpandImageUploadRequest extends AbstractAlipayRequest { private $imageContent; private $imageType; public function setImageContent($imageContent) { $this->imageContent = $imageContent; $this->apiParams['image_content'] = $imageContent; } public function getImageContent() { return $this->imageContent; } public function setImageType($imageType) { $this->imageType = $imageType; $this->apiParams['image_type'] = $imageType; } public function getImageType() { return $this->imageType; } } 

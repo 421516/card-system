@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayTrustUserReportGetRequest extends AbstractAlipayRequest { private $scene; private $type; public function setScene($scene) { $this->scene = $scene; $this->apiParams['scene'] = $scene; } public function getScene() { return $this->scene; } public function setType($type) { $this->type = $type; $this->apiParams['type'] = $type; } public function getType() { return $this->type; } } 

@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayUserTestRequest extends AbstractAlipayRequest { private $userinfo; public function setUserinfo($userinfo) { $this->userinfo = $userinfo; $this->apiParams['userinfo'] = $userinfo; } public function getUserinfo() { return $this->userinfo; } } 

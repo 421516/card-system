@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMobilePublicTemplateMessageQueryRequest extends AbstractAlipayRequest { private $template; private $templateId; public function setTemplate($template) { $this->template = $template; $this->apiParams['template'] = $template; } public function getTemplate() { return $this->template; } public function setTemplateId($templateId) { $this->templateId = $templateId; $this->apiParams['template_id'] = $templateId; } public function getTemplateId() { return $this->templateId; } } 

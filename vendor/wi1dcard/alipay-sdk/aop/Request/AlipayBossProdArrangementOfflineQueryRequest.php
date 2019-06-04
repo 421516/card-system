@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayBossProdArrangementOfflineQueryRequest extends AbstractAlipayRequest { private $productCode; public function setProductCode($productCode) { $this->productCode = $productCode; $this->apiParams['product_code'] = $productCode; } public function getProductCode() { return $this->productCode; } } 

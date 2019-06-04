@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayOfflineMarketShopPublicBindRequest extends AbstractAlipayRequest { private $isAll; private $shopIds; public function setIsAll($isAll) { $this->isAll = $isAll; $this->apiParams['is_all'] = $isAll; } public function getIsAll() { return $this->isAll; } public function setShopIds($shopIds) { $this->shopIds = $shopIds; $this->apiParams['shop_ids'] = $shopIds; } public function getShopIds() { return $this->shopIds; } } 

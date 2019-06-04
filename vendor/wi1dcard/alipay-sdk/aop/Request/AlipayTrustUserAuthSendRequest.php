@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayTrustUserAuthSendRequest extends AbstractAlipayRequest { private $aliTrustUserInfo; public function setAliTrustUserInfo($aliTrustUserInfo) { $this->aliTrustUserInfo = $aliTrustUserInfo; $this->apiParams['ali_trust_user_info'] = $aliTrustUserInfo; } public function getAliTrustUserInfo() { return $this->aliTrustUserInfo; } } 

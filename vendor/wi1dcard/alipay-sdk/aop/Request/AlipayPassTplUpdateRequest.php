@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayPassTplUpdateRequest extends AbstractAlipayRequest { private $tplContent; private $tplId; public function setTplContent($tplContent) { $this->tplContent = $tplContent; $this->apiParams['tpl_content'] = $tplContent; } public function getTplContent() { return $this->tplContent; } public function setTplId($tplId) { $this->tplId = $tplId; $this->apiParams['tpl_id'] = $tplId; } public function getTplId() { return $this->tplId; } } 

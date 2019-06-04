@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayZdataserviceUnidataQueryRequest extends AbstractAlipayRequest { private $queryCondition; private $uniqKey; public function setQueryCondition($queryCondition) { $this->queryCondition = $queryCondition; $this->apiParams['query_condition'] = $queryCondition; } public function getQueryCondition() { return $this->queryCondition; } public function setUniqKey($uniqKey) { $this->uniqKey = $uniqKey; $this->apiParams['uniq_key'] = $uniqKey; } public function getUniqKey() { return $this->uniqKey; } } 

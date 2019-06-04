@@ -1,70 +1,70 @@
 <?php
-use Illuminate\Database\Seeder; class PayTableSeeder extends Seeder { private function initPay() { $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'Fakala'; $spf13a06->way = 'alipay'; $spf13a06->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spf13a06->config = '{
+use Illuminate\Database\Seeder; class PayTableSeeder extends Seeder { private function initPay() { $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'Fakala'; $spb09730->way = 'alipay'; $spb09730->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spb09730->config = '{
   "gateway": "https://www.327ka.com",
   "api_id": "your api_id",
   "api_key": "your api_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_PC; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'Fakala'; $spf13a06->way = 'alipaywap'; $spf13a06->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_PC; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'Fakala'; $spb09730->way = 'alipaywap'; $spb09730->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spb09730->config = '{
   "gateway": "https://www.327ka.com",
   "api_id": "your api_id",
   "api_key": "your api_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_MOBILE; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '微信'; $spf13a06->img = '/plugins/images/wx.png'; $spf13a06->driver = 'Fakala'; $spf13a06->way = 'wx'; $spf13a06->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_MOBILE; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '微信'; $spb09730->img = '/plugins/images/wx.png'; $spb09730->driver = 'Fakala'; $spb09730->way = 'wx'; $spb09730->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spb09730->config = '{
   "gateway": "https://www.327ka.com",
   "api_id": "your api_id",
   "api_key": "your api_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_PC; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '微信'; $spf13a06->img = '/plugins/images/wx.png'; $spf13a06->driver = 'Fakala'; $spf13a06->way = 'wxwap'; $spf13a06->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_PC; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '微信'; $spb09730->img = '/plugins/images/wx.png'; $spb09730->driver = 'Fakala'; $spb09730->way = 'wxwap'; $spb09730->comment = 'alipay、alipaywap、wx、wxwap、qq、qqwap'; $spb09730->config = '{
   "gateway": "https://www.327ka.com",
   "api_id": "your api_id",
   "api_key": "your api_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_MOBILE; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'Alipay'; $spf13a06->way = 'pc'; $spf13a06->comment = '支付宝 - 即时到账套餐(企业)V2'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_MOBILE; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'Alipay'; $spb09730->way = 'pc'; $spb09730->comment = '支付宝 - 即时到账套餐(企业)V2'; $spb09730->config = '{
   "partner": "partner",
   "key": "key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'Aliwap'; $spf13a06->way = 'wap'; $spf13a06->comment = '支付宝 - 高级手机网站支付V4'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'Aliwap'; $spb09730->way = 'wap'; $spb09730->comment = '支付宝 - 高级手机网站支付V4'; $spb09730->config = '{
   "partner": "partner",
   "key": "key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝扫码'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'AliAop'; $spf13a06->way = 'f2f'; $spf13a06->comment = '支付宝 - 当面付'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝扫码'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'AliAop'; $spb09730->way = 'f2f'; $spb09730->comment = '支付宝 - 当面付'; $spb09730->config = '{
   "app_id": "app_id",
   "alipay_public_key": "alipay_public_key",
   "merchant_private_key": "merchant_private_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'AliAop'; $spf13a06->way = 'pc'; $spf13a06->comment = '支付宝 - 电脑网站支付 (新)'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'AliAop'; $spb09730->way = 'pc'; $spb09730->comment = '支付宝 - 电脑网站支付 (新)'; $spb09730->config = '{
   "app_id": "app_id",
   "alipay_public_key": "alipay_public_key",
   "merchant_private_key": "merchant_private_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '手机支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'AliAop'; $spf13a06->way = 'mobile'; $spf13a06->comment = '支付宝 - 手机网站支付 (新)'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '手机支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'AliAop'; $spb09730->way = 'mobile'; $spb09730->comment = '支付宝 - 手机网站支付 (新)'; $spb09730->config = '{
   "app_id": "app_id",
   "alipay_public_key": "alipay_public_key",
   "merchant_private_key": "merchant_private_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '微信扫码'; $spf13a06->img = '/plugins/images/wx.png'; $spf13a06->driver = 'WeChat'; $spf13a06->way = 'NATIVE'; $spf13a06->comment = '微信支付 - 扫码'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '微信扫码'; $spb09730->img = '/plugins/images/wx.png'; $spb09730->driver = 'WeChat'; $spb09730->way = 'NATIVE'; $spb09730->comment = '微信支付 - 扫码'; $spb09730->config = '{
   "APPID": "APPID",
   "APPSECRET": "APPSECRET",
   "MCHID": "商户ID",
   "KEY": "KEY"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '微信H5'; $spf13a06->img = '/plugins/images/wx.png'; $spf13a06->driver = 'WeChat'; $spf13a06->way = 'MWEB'; $spf13a06->comment = '微信支付 - H5 (需要开通权限)'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '微信H5'; $spb09730->img = '/plugins/images/wx.png'; $spb09730->driver = 'WeChat'; $spb09730->way = 'MWEB'; $spb09730->comment = '微信支付 - H5 (需要开通权限)'; $spb09730->config = '{
   "APPID": "APPID",
   "APPSECRET": "APPSECRET",
   "MCHID": "商户ID",
   "KEY": "KEY"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '手机QQ'; $spf13a06->img = '/plugins/images/qq.png'; $spf13a06->driver = 'QPay'; $spf13a06->way = 'NATIVE'; $spf13a06->comment = '手机QQ - 扫码'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '手机QQ'; $spb09730->img = '/plugins/images/qq.png'; $spb09730->driver = 'QPay'; $spb09730->way = 'NATIVE'; $spb09730->comment = '手机QQ - 扫码'; $spb09730->config = '{
   "mch_id": "mch_id",
   "mch_key": "mch_key"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'Youzan'; $spf13a06->way = 'alipay'; $spf13a06->comment = '有赞支付 - 支付宝'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'Youzan'; $spb09730->way = 'alipay'; $spb09730->comment = '有赞支付 - 支付宝'; $spb09730->config = '{
   "client_id": "client_id",
   "client_secret": "client_secret",
   "kdt_id": "kdt_id"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '微信'; $spf13a06->img = '/plugins/images/wx.png'; $spf13a06->driver = 'Youzan'; $spf13a06->way = 'wechat'; $spf13a06->comment = '有赞支付 - 微信'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '微信'; $spb09730->img = '/plugins/images/wx.png'; $spb09730->driver = 'Youzan'; $spb09730->way = 'wechat'; $spb09730->comment = '有赞支付 - 微信'; $spb09730->config = '{
   "client_id": "client_id",
   "client_secret": "client_secret",
   "kdt_id": "kdt_id"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '手机QQ'; $spf13a06->img = '/plugins/images/qq.png'; $spf13a06->driver = 'Youzan'; $spf13a06->way = 'qq'; $spf13a06->comment = '有赞支付 - 手机QQ'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '手机QQ'; $spb09730->img = '/plugins/images/qq.png'; $spb09730->driver = 'Youzan'; $spb09730->way = 'qq'; $spb09730->comment = '有赞支付 - 手机QQ'; $spb09730->config = '{
   "client_id": "client_id",
   "client_secret": "client_secret",
   "kdt_id": "kdt_id"
-}'; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '支付宝'; $spf13a06->img = '/plugins/images/ali.png'; $spf13a06->driver = 'CodePay'; $spf13a06->way = 'alipay'; $spf13a06->comment = '码支付 - 支付宝'; $spf13a06->config = '{
+}'; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '支付宝'; $spb09730->img = '/plugins/images/ali.png'; $spb09730->driver = 'CodePay'; $spb09730->way = 'alipay'; $spb09730->comment = '码支付 - 支付宝'; $spb09730->config = '{
   "id": "id",
   "key": "key"
-}'; $spf13a06->fee_system = 0; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '微信'; $spf13a06->img = '/plugins/images/wx.png'; $spf13a06->driver = 'CodePay'; $spf13a06->way = 'weixin'; $spf13a06->comment = '码支付 - 微信'; $spf13a06->config = '{
+}'; $spb09730->fee_system = 0; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '微信'; $spb09730->img = '/plugins/images/wx.png'; $spb09730->driver = 'CodePay'; $spb09730->way = 'weixin'; $spb09730->comment = '码支付 - 微信'; $spb09730->config = '{
   "id": "id",
   "key": "key"
-}'; $spf13a06->fee_system = 0; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); $spf13a06 = new \App\Pay(); $spf13a06->name = '手机QQ'; $spf13a06->img = '/plugins/images/qq.png'; $spf13a06->driver = 'CodePay'; $spf13a06->way = 'qq'; $spf13a06->comment = '码支付 - 手机QQ'; $spf13a06->config = '{
+}'; $spb09730->fee_system = 0; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); $spb09730 = new \App\Pay(); $spb09730->name = '手机QQ'; $spb09730->img = '/plugins/images/qq.png'; $spb09730->driver = 'CodePay'; $spb09730->way = 'qq'; $spb09730->comment = '码支付 - 手机QQ'; $spb09730->config = '{
   "id": "id",
   "key": "key"
-}'; $spf13a06->fee_system = 0; $spf13a06->enabled = \App\Pay::ENABLED_DISABLED; $spf13a06->save(); } public function run() { self::initPay(); } }
+}'; $spb09730->fee_system = 0; $spb09730->enabled = \App\Pay::ENABLED_DISABLED; $spb09730->save(); } public function run() { self::initPay(); } }

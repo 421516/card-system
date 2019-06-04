@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMicropayOrderUnfreezeRequest extends AbstractAlipayRequest { private $alipayOrderNo; private $memo; public function setAlipayOrderNo($alipayOrderNo) { $this->alipayOrderNo = $alipayOrderNo; $this->apiParams['alipay_order_no'] = $alipayOrderNo; } public function getAlipayOrderNo() { return $this->alipayOrderNo; } public function setMemo($memo) { $this->memo = $memo; $this->apiParams['memo'] = $memo; } public function getMemo() { return $this->memo; } } 

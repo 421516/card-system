@@ -1,0 +1,2 @@
+<?php
+ use Alipay\AlipayRequestFactory; $aop = require __DIR__ . '/_bootstrap.php'; $apiName = basename(__FILE__, '.php'); $request = AlipayRequestFactory::create($apiName, [ 'biz_content' => [ 'url_param' => '/', 'query_param' => 'foo=bar', 'describe' => 'baz', ], ]); try { $data = $aop->execute($request)->getData(); print_r($data); } catch (\Exception $ex) { http_response_code(500); print_r($ex); }

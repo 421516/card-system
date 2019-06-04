@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayUserAccountFreezeGetRequest extends AbstractAlipayRequest { private $freezeType; public function setFreezeType($freezeType) { $this->freezeType = $freezeType; $this->apiParams['freeze_type'] = $freezeType; } public function getFreezeType() { return $this->freezeType; } } 

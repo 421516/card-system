@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayEbppBillGetRequest extends AbstractAlipayRequest { private $merchantOrderNo; private $orderType; public function setMerchantOrderNo($merchantOrderNo) { $this->merchantOrderNo = $merchantOrderNo; $this->apiParams['merchant_order_no'] = $merchantOrderNo; } public function getMerchantOrderNo() { return $this->merchantOrderNo; } public function setOrderType($orderType) { $this->orderType = $orderType; $this->apiParams['order_type'] = $orderType; } public function getOrderType() { return $this->orderType; } } 

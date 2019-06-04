@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayZmscoreZrankGetRequest extends AbstractAlipayRequest { private $userId; public function setUserId($userId) { $this->userId = $userId; $this->apiParams['user_id'] = $userId; } public function getUserId() { return $this->userId; } } 

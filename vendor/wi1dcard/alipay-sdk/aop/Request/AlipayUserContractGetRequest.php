@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayUserContractGetRequest extends AbstractAlipayRequest { private $subscriberUserId; public function setSubscriberUserId($subscriberUserId) { $this->subscriberUserId = $subscriberUserId; $this->apiParams['subscriber_user_id'] = $subscriberUserId; } public function getSubscriberUserId() { return $this->subscriberUserId; } } 

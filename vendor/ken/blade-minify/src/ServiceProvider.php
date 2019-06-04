@@ -1,0 +1,2 @@
+<?php
+ namespace Ken\BladeMinify; use Illuminate\Support\ServiceProvider as BaseServiceProvider; class ServiceProvider extends BaseServiceProvider { protected $defer = false; public function boot() { $this->publishes([ __DIR__.'/../config/blade-minify.php' => config_path('blade-minify.php'), ]); } public function register() { $this->mergeConfigFrom(__DIR__.'/../config/blade-minify.php', 'blade-minify.php'); } }

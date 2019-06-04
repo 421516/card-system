@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMobilePublicTemplateMessageDeleteRequest extends AbstractAlipayRequest { private $templateId; public function setTemplateId($templateId) { $this->templateId = $templateId; $this->apiParams['template_id'] = $templateId; } public function getTemplateId() { return $this->templateId; } } 

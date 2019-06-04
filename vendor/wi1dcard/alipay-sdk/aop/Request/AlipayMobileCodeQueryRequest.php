@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayMobileCodeQueryRequest extends AbstractAlipayRequest { private $qrToken; public function setQrToken($qrToken) { $this->qrToken = $qrToken; $this->apiParams['qr_token'] = $qrToken; } public function getQrToken() { return $this->qrToken; } } 

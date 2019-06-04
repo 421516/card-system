@@ -1,0 +1,2 @@
+<?php
+ require __DIR__ . '/../../vendor/autoload.php'; use Alipay\Key\AlipayKeyPair; use Alipay\Key\AlipayPrivateKey; $configargs = [ ]; $keyPair = AlipayKeyPair::generate($configargs); echo $keyPair->getPublicKey()->asString(); echo AlipayPrivateKey::toString($keyPair->getPrivateKey()->asResource(), $configargs);

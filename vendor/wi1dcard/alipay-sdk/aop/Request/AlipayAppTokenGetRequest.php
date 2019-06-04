@@ -1,0 +1,2 @@
+<?php
+ namespace Alipay\Request; class AlipayAppTokenGetRequest extends AbstractAlipayRequest { private $secret; public function setSecret($secret) { $this->secret = $secret; $this->apiParams['secret'] = $secret; } public function getSecret() { return $this->secret; } } 
